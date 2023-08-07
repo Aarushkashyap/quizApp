@@ -18,7 +18,7 @@ app.use('/user',userRoute);
 
  mongoose.connect(connectionString)
 .then(()=> {
-    console.log('connected Successfully')
+    console.log('Server connected')
     app.listen(3000);
 })
 .catch((err) => {console.log(err); })
