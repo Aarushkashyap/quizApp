@@ -1,9 +1,15 @@
 //redirect request to particular methon on Controller
 import express from 'express';
-import {registerUser} from '../controllers/user';
+import {getUser, registerUser, updateUser} from '../controllers/user';
 const router = express.Router();
 
 //POST /user/
-router.post('/',registerUser)
+router.post('/',registerUser);
+
+//Get /user/:userId
+router.get('/:userId',getUser);
+
+//PUT /user/
+router.put('/',updateUser);
 
 export default router;
